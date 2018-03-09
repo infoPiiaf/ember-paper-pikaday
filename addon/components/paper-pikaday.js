@@ -53,9 +53,7 @@ export default PaperInput.extend(PikadayMixin, {
 			]).toDate();
 		}
 
-		let format = this.get('format') || this.set('format', defaultFormat);
-		let formattedDate = moment(selectedDate).format(format);
-		this.sendAction('onChange', formattedDate);
+		this.sendAction('onChange', selectedDate);
 	},
 
 	onPikadayOpen() {
